@@ -1,0 +1,17 @@
+{
+  "name": "lab_1",
+  "version": "1.0.0",
+  "description": "Lab1",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "yiksvolro",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^8.9.0"
+  },
+  "devDependencies": {
+    "custom_module": "file:custom_module"
+  }
+}
