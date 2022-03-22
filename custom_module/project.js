@@ -17,12 +17,12 @@ function find_Project (name) {
 
 }
 
-function add_Project (name) {
+function add_Project (name,isArchive) {
 
     let project = new Project(name,isArchive);
     global_project_list.push(project);
 
-    return hospital;
+    return project;
 
 }
 

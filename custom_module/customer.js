@@ -38,7 +38,7 @@ function remove_Customer (name, address, project) {
 
 }
 
-function edit_Customer (name, address, new_name, new_address) {
+function edit_Customer (name, address, new_name, new_address, project) {
 
     let customer = find_Customer(name, address);
 
@@ -51,7 +51,7 @@ function edit_Customer (name, address, new_name, new_address) {
 
     id = global_customers_list.indexOf(customer);
     global_customers_list[id].name = new_name;
-    global_customers_list[id].address = new_adress;
+    global_customers_list[id].address = new_address;
 
     return 1;
 
