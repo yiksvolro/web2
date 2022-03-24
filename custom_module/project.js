@@ -45,8 +45,18 @@ function edit_Project(name,new_name,new_is_Archive){
 
 function find_Projects_By_Customer(customer){
     let projects = new Array();
-    for(let project in global_project_list){
+    for(let project of global_project_list){
         if(project.customer_list.includes(customer) && project.isArchive === false){
+            projects.push(project);
+        }
+    }
+    return projects;
+}
+
+function find_Projects_By_Dev(dev){
+    let projects = new Array();
+    for(let project of global_project_list){
+        if(project.developer_list.includes(dev) && project.isArchive === false){
             projects.push(project);
         }
     }
@@ -58,3 +68,4 @@ exports.add_Project = add_Project;
 exports.remove_Project = remove_Project;
 exports.edit_Project = edit_Project;
 exports.find_Projects_By_Customer = find_Projects_By_Customer;
+exports.find_Projects_By_Dev = find_Projects_By_Dev;

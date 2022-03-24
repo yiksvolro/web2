@@ -17,9 +17,14 @@ function find_Customer (name, address) {
 
 function add_Customer (name, address, project) {
     let customer = new Customer(name, address);
-    project.customer_list.push(customer);
     global_customers_list.push(customer);
     return customer;
+}
+
+function add_Customer_To_Project(name,address,project){
+    let customer = find_Customer(name,address);
+    project.customer_list.push(customer);
+    return project;
 }
 
 function remove_Customer (name, address, project) {
@@ -59,5 +64,6 @@ function edit_Customer (name, address, new_name, new_address, project) {
 
 exports.find_Customer = find_Customer;
 exports.add_Customer = add_Customer;
+exports.add_Customer_To_Project = add_Customer_To_Project;
 exports.remove_Customer = remove_Customer;
 exports.edit_Customer = edit_Customer;
